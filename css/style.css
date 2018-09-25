@@ -1,0 +1,173 @@
+@keyframes burgerAnimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: "SourceCode";
+ src: url("fonts/SourceCode.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Christmas";
+ src: url("fonts/HC.ttf") format("TrueTypeFont");
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  font-family: "SourceCode", Arial, serif, sans-serif;
+}
+
+body {
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-bottom: 10%;
+}
+
+main {
+  margin-top: 4%;
+}
+
+.little {
+  transition: all .2s ease-in-out;
+}
+
+.little:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  height: 5%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.80);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+nav * {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#burger {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(60, 60, 60);
+  padding: 10px;
+  height: 10%;
+  width: 100%;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0px;
+}
+
+footer * {
+  color: rgb(125, 125, 125);
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer div * {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+#MenuDeroulant
+{
+  padding: 5px;
+}
+#pageMetier
+{
+  display: none;
+}
+#MenuDeroulant:hover
+{
+  display: flex;
+  flex-direction: column;
+}
+#MenuDeroulant:hover #pageMetier
+{
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  top:47px;
+  background-color: rgba(40, 40, 40, 0.50);
+  border-bottom: dashed;
+  border-left: dashed;
+  border-right: dashed;
+  border-width: thin;
+}
+@media (max-width: 980px) {
+  .menuItem {
+    display: none;
+  }
+
+  #burger {
+    display: block;
+    position: absolute;
+    left: 5px;
+  }
+
+  #burger div {
+    position: absolute;
+    top: 100%;
+    left: -600%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  #burger:hover > img {
+    animation: burgerAnimation 1.2s;
+  }
+
+  #burger:hover div {
+    left: -70%;
+    transition: left 1s ease;
+  }
+
+  footer {
+    margin: auto;
+    height: auto;
+    padding: 3px;
+  }
+
+  footer div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

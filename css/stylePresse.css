@@ -1,0 +1,187 @@
+@keyframes enterHead {
+  0% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+
+  33% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  25% {
+    transform: translateX(-2000px);
+  }
+
+  66% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideLeftLater {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  25% {
+    transform: translateX(-2000px);
+  }
+
+  66% {
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+body {
+  background-color: rgb(220,220,220);
+}
+
+main {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#enTete * {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180,180,180);
+}
+
+#ContactDirecteurPresse {
+  display: flex;
+  margin-bottom: 100px;
+  animation: slideLeftLater 1.5s;
+}
+
+h4 {
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+#stats {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#stats div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 70px;
+  margin: auto;
+  line-height: 0.02;
+  white-space: nowrap;
+  animation: slideLeft 1.5s;
+}
+
+#mainElement {
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  margin-left: 2%;
+  margin-right: 2%;
+  white-space: nowrap;
+  margin-bottom: 50px;
+  animation: slideLeftLater 1.5s;
+}
+
+#mainElement > article:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 99%;
+}
+
+.pressArticle
+{
+	display: flex;
+	flex-direction: column;
+
+}
+
+section a {
+  color: #2F4F4F;
+}
+
+section a:hover {
+  color: #59d2ef;
+}
+
+h1 {
+  font-family: 'Source Sans Pro';
+  font-size: 200%;
+  line-height: 27px;
+  color: #122844;
+  animation: enterHead 1.5s;
+}
+
+.petiteStat {
+  transition: all .2s ease-in-out;
+}
+
+.petiteStat:hover {
+  transform: scale(1.2);
+}
+
+.petiteStat h2 {
+  font-size: 200%;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #59d2ef;
+}
+
+.petiteStat h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #59d2ef;
+}
+
+#mainElement h3 {
+  margin-left: 3%;
+  margin-bottom: -25px;
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+#mainElement h5 {
+  margin-left: 4%;
+}
+
+#mainElement h2 {
+  margin-left: 2%;
+  border-bottom: inset;
+  border-width: thin;
+}
+
+@media (max-width: 480px) {
+  #mainElement {
+    margin-bottom: 150px;
+  }
+}

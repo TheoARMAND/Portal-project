@@ -1,0 +1,99 @@
+
+body{
+  background-color: rgb(170, 170, 170);
+
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+margin-top: 75px;
+}
+section.content{
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+  border: solid 3px  rgb(170, 170, 170);
+  width: 100%;
+}
+section#lieu{
+  justify-content: center;
+  text-align: justify;
+}
+fieldset.questionnaire{
+  background:  rgb(190 ,190, 200);
+}
+article#contact{
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+
+article#contact *{
+  text-align: center;
+  margin: auto;
+}
+#comment {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+
+}
+textarea{
+  height: 150px;
+  width: 550px;
+  resize: vertical;
+}
+button{
+  margin-left: 30px ;
+}
+#buttonenvoi{
+  width: 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+section.content>h1{
+  text-align: center;
+  font-family: fantasy;
+}
+section.content>article{
+  display:block;
+  text-align: center;
+  max-width: 50%;
+}
+section.content>iframe{
+  display: block;
+}
+#contact>#contactTxt{
+  color:#0080FF;
+
+}
+#contact>#attention{
+  font-size: 80%;
+  font-family: cursive;
+}
+form{
+display: flex;
+margin: auto;
+
+}
+@media (max-width:980px ){
+
+section.content{
+  flex-direction: column;
+}
+main{
+  margin-top: 120px;
+
+
+}

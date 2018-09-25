@@ -1,0 +1,170 @@
+/*Animation*/
+@keyframes enterHead {
+  0% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes enterDown {
+  0% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+body {
+  background-color: rgb(210,210,210);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+section:not(#enTete) {
+  width: 90%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 100px;
+  padding-bottom: 20px;
+  border-bottom: double;
+  border-width: thick;
+  animation: enterDown 1.5s;
+  margin-bottom: 100px;
+}
+
+#enTete {
+  justify-content: center;
+  align-items: center;
+  animation: enterHead 1.5s;
+}
+
+#Recrutement {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  display: flex;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Source Sans Pro';
+  line-height: 40px;
+  color: #122844;
+  font-size: 200%;
+  border-bottom-style: inset;
+  border-color: #59d2ef;
+  border-width: thick;
+}
+
+h2 {
+  line-height: 27px;
+  color: #122844;
+  border-bottom: inset;
+  border-color: #00FFFF;
+  border-radius: 2%;
+  font-size: 300%;
+  border-bottom-width: medium;
+}
+/*before selectionne ce que contiendra la balise ouvrante*/
+[for]::before {
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #59d2ef;
+  content: "+";
+  background: rgba(0,0,0,0);
+}
+/*Effet lors du hover du checkbox label */
+[for]:hover {
+  color: #59d2ef;
+}
+/*Cacher la checkbox blanche */
+[type=checkbox] {
+  display: none;
+}
+/* Etat du texte dans la checkbox par defaut */
+[type=checkbox] ~ .conditionBox {
+  margin-left: 30px;
+  display: none;
+  color: #696969;
+}
+/* Etat du texte dans la checkbox une fois activé*/
+[type=checkbox]:checked ~ .conditionBox {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: slide-down .5s ease-out;
+  -moz-animation: slide-down .5s ease-out;
+}
+/* Etat du label une fois la checkbox activé */
+[type=checkbox]:checked ~ [for]::before {
+  height: 30px;
+  width: 30px;
+  margin: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #59d2ef;
+  content: "-";
+  background: rgba(0,0,0,0);
+}
+
+@media (max-width: 980px) {
+  section:not(#enTete) {
+    margin-left: 10px;
+  }
+
+  section#enTete * {
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

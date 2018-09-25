@@ -1,0 +1,126 @@
+@keyframes enterHead {
+  0% {
+    opacity: 0;
+    transform: scale(0.0);
+  }
+
+  33% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  25% {
+    transform: translateX(-2000px);
+  }
+
+  66% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideLeftLater {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  25% {
+    transform: translateX(-2000px);
+  }
+
+  66% {
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+body {
+  background-color: rgb(208, 208, 208);
+}
+
+main {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+main h1 {
+  padding-left: 1%;
+}
+
+h1 {
+  font-size: 2.5em;
+  background-color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-content: center;
+  align-content: center;
+  animation: enterHead 3s;
+}
+
+h2 {
+  font-size: 2.0em;
+}
+
+#headBanner {
+  background-image: url("../assets/productBackground.jpg");
+  color: white;
+  padding: 30px 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: slideLeft 3s;
+}
+
+#caracTitle {
+  text-align: center;
+  animation: slideLeftLater 3s;
+}
+
+#carac {
+  display: flex;
+  flex-direction: column;
+  animation: slideLeftLater 3s;
+}
+
+#carac * {
+  margin: 3%;
+}
+
+#hoverButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+input {
+  width: 100%;
+}

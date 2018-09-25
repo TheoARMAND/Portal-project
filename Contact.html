@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Entreprise random.com</title>
+  <meta charset="utf-8" />
+  <link type="text/css" href="css/style.css" rel="stylesheet" />
+  <link type="text/css" href="css/styleContact.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+  <nav>
+    <div id="burger">
+      <img src="assets/burger.png" alt="Icone Burger" />
+      <div>
+        <a href="equipe.html">L'équipe</a>
+        <a href="contact.html">Contact</a>
+        <a href="presse.html">Presse</a>
+        <a href="recrutement.html">Nous rejoindre</a>
+        <a href="FAQ.html">F.A.Q.</a>
+      </div>
+    </div>
+
+    <div>
+      <a href="index.html"><img src="assets/logo.png" alt="Logo" width="60" height="40" id="logo"/></a>
+    </div>
+
+    <div class="menuItem">
+      <a href="equipe.html">L'équipe</a>
+    </div>
+
+    <div class="menuItem">
+      <a href="Contact.html">Contact</a>
+    </div>
+
+    <div class="menuItem">
+      <a href="presse.html">Presse</a>
+    </div>
+
+    <div class="menuItem" id="MenuDeroulant">
+      <div>Recrutement &#9662;</div>
+      <div id="pageMetier">
+        <a href="Metier1.html">Physicien</a>
+        <a href="Metier2.html">Mécanicien</a>
+        <a href="Metier3.html">Developpeur</a>
+      </div>
+    </div>
+
+    <div class="menuItem">
+      <a href="FAQ.html">F.A.Q.</a>
+    </div>
+  </nav>
+
+
+
+
+
+  <main>
+
+
+    <section id="lieu" class="content" >
+      <fieldset id=text >
+
+
+        <article id="contact">
+          <h1>CONTACTEZ NOUS</h1>
+          <p id="contactTxt">
+            nous sommes joignable pour tout service apres vente et dans le point de ventes visible sur la carte ci-contre ainsi qu'au 3630
+          </p>
+          <p id="attention">
+            attention il se peut que vous tombier sur le telephone du pere noël nous declinons toute responsabilité
+          </p>
+        </article>
+      </fieldset>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11550.294503613373!2d3.8530416!3d43.6362325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a1585a408bcfed4!2sIUT+Montpellier!5e0!3m2!1sfr!2sfr!4v1508073378564" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+
+
+    <section class="content">
+
+      <div id="information">
+
+        <form action="/action_fake.php" method="post">
+          <fieldset class="questionnaire">
+        <h2> S'inscrire</h2>
+            prenom:<br><input type="text" name="Prénom"placeholder="roger"required/><br>
+            nom:<br><input type="text" name="NOM"placeholder="LETAVERNIER" required/><br>
+            email:<br><input type="email" name="email" placeholder="roger@monmail.fr" required/><br>
+            date de naissance:<br><input type="date" name="date de naissance" required/><br>
+            pays: <br><select  name="pays" id="pays"required/ >
+              <option value="dreamland">Dreamland</option>
+              <option value="France"> France</option>
+              <option value="tchentchenie">Tchentchenie</option>
+              <option value="yougoslavie">Yougoslavie</option>
+              <option value="URSS">URSS</option>
+              <option value="groland">Groland</option></select><br>
+              code Postal:<br><input type="number" placeholder="34800" name="code postal " /><br><br>
+
+              <button type="submit">NE CLIQUE PAS</button><br>
+            </fieldset>
+          </div>
+          <div id= "comment">
+
+            <fieldset class="questionnaire">
+              <h2>Nous Contacter(compte requis)</h2>
+              vous avez entendu parlé de nous via: <br><select  name="comment" id="select" >
+                <option value="defaut">choisir une raison</option>
+                <option value="raton-laveur"> mon raton-laver</option>
+                <option value="olivier">olivier de carglass</option>
+                <option value="telepotation">un homme est venu chez moi en se teleportant par erreur</option>
+                <option value="Komsomolskaïa Pravda">le journal Komsomolskaïa Pravda durant l'URSS</option>
+                <option value="braqueur">la personne qui m'a voler mon telephone s'est enfuit en se teleportant</option>
+                <option value="nozman">une vidéo du docteur nozman</option></select>
+              </form>
+              <br>
+              <label for="message">Message :</label><br>
+              <textarea id="message"></textarea><br>
+              date à laquelle vous souhaitez être recontacté:<br><input type="date" name=" recontacté"/><br>
+              <br><button id="buttonenvoi"type="submit">n'envoi pas</button>
+
+            </fieldset>
+          </div>
+        </section>
+      </main>
+
+
+
+      <footer>
+        <div id="siteMap">
+          <a href="index.html">Acceuil</a>
+          <a href="equipe.html">L'équipe</a>
+          <a href="Contact.html">Contact</a>
+          <a href="">Presse</a>
+          <a href="recrutement.html">Nous Rejoindre</a>
+          <a href="">F.A.Q.</a>
+        </div>
+        <div id="social">
+          <a href="http://facebook.com"><img src="assets/facebook.png" alt="Facebook" width="30px" height="30px"/></a>
+          <a href="http://twitter.com"><img src="assets/twitter.png" alt="Twitter" width="30px" height="30px"/></a>
+          <a href="http://google.com"><img src="assets/google.png" alt="Google" width="30px" height="30px"/></a>
+        </div>
+      </footer>
+    </body>
+    </html>
